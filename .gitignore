@@ -24,3 +24,7 @@ images-*.tar
 
 # Rust binary artifacts
 /target/
+
+# sample files
+input.png
+output.jpeg

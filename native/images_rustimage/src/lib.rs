@@ -6,7 +6,7 @@ fn add(a: i64, b: i64) -> i64 {
     a + b + 1
 }
 
-#[rustler::nif]
+#[rustler::nif(schedule = "DirtyCpu")]
 fn jpg(input: String, output: String, quality: i64) -> Result<String, String> {
     let img = ImageReader::open(&input).unwrap().decode().unwrap();
     let out_file = std::fs::File::create(&output).unwrap();
